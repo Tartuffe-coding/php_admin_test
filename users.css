@@ -1,0 +1,123 @@
+/*-------------------------------FONTS INITIALISATION-------------------------------*/
+
+/*commande pour importer plusieurs fonts depuis le site de google fonts sans installation*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Nabla&family=Oswald:wght@200;300;400;500;600;700&family=Passion+One:wght@400;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;500;700;900&family=Secular+One&family=Staatliches&display=swap');
+
+/* NOM DES FONTS DISPONIBLES
+font-family: 'Anton', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Nabla', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Passion One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Secular One', sans-serif;
+font-family: 'Staatliches', cursive;
+*/
+
+
+/*-------------------------------PROPRIETES GENERALES-------------------------------*/
+
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(37, 140, 138);
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(16, 14, 46);
+}
+
+
+/*-------------------------------TABLEAU DES SCORES-------------------------------*/
+
+
+
+#score_table_section{
+    background-color: rgb(17, 16, 47);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score_table {
+    border-collapse: collapse;
+    /* margin: 25px 0; */
+    font-size: 0.9em;
+    width: 90%;
+    /* min-width: 400px; */
+    border-radius: 5px 5px 0 0;
+    /* JE FAIS CA POUR POUVOIR ANIMER LES RANGER MAIS CA PEUT ETRE DANGEREUX POUR LE DEPASSEMENT DU TEXTE */
+    /* overflow: hidden; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .score_table thead tr {
+    /* background-color: #009879; */
+    background-color: rgb(88, 15, 171);
+    color: #409e9f;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .score_table th,
+  .score_table td {
+    /* padding: 12px 15px; */
+    padding: 5px;
+  }
+  
+  .score_table tbody tr {
+    border-bottom: 1px solid #38b8b6;
+
+    /* Necessaire pour pouvoir animer chaque ligne du tableau avec hover */
+    transition: all 0.3s ease-in-out;
+
+  }
+  
+
+  .score_table tbody tr:nth-of-type(odd) {
+    background-color: #20b1b6;
+  }
+
+
+  .score_table tbody tr:nth-of-type(even) {
+    /* background-color: #f3f3f3; */
+    background-color: #98d7d9;
+  }
+  
+  .score_table tbody tr:last-of-type {
+    /* border-bottom: 2px solid #009879; */
+    border-bottom: 10px solid rgb(88, 15, 171);
+  }
+  
+  .score_table tbody tr.active-row {
+    font-weight: bold;
+    /* color: #009879; */
+    background: linear-gradient(90deg, rgb(16, 3, 62) 0%, rgba(101,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+
+  /* Propriétés pour adapté le tableau au écrant très fin (galaxy fold, iphone 5C) */
+  @media all and (max-width : 350px){
+    .score_table {
+      font-size: 0.7em;
+      width: 95%;
+    }
+    
+    
+    .score_table td {
+      padding: 3px;
+    }
+    
+  }

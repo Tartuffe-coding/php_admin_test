@@ -14,6 +14,8 @@ if (isset($_GET['id'])) {
 // Recuperer l'utilisateur a mettre a jour avec PDO et une requete SQL
 // $user = ...;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +25,9 @@ if (isset($_GET['id'])) {
     <title>Mettre a jour un utilisateur</title>
 </head>
 <body>
+    <h1>test </h1>
     <!-- Afficher un formulaire avec les data de l'utilisateur -->
-    <!-- <input type="text" name="username" value="<?= /* $user['username'] */ ?>" -->
+    <input type="text" name="username" value="<?php $users['username'] ?>">
+
 </body>
 </html>
